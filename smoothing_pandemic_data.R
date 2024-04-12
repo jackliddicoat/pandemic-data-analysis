@@ -43,3 +43,7 @@ lines(smooth.spline(time(sweden$asmr), sweden$asmr, spar=.6), lwd=1.5, col="char
 legend("topleft", legend = c('spar = .2', 'spar = .4', 'spar = .6'), lwd = 1.5,
        col = c("red", "blue", "chartreuse4"), cex = .8)
 
+# smoothing using the supsmu function
+plot(time(sweden$asmr), sweden$asmr, col = "grey",
+     main = "Smoothing using supsmu()")
+lines(supsmu(time(sweden$asmr), sweden$asmr), col = "red")
